@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio
+
+A modern portfolio website for a front-end engineer. Built with Next.js, Tailwind CSS, and Framer Motion.
+
+## Features
+
+- Responsive design that works on all devices
+- Modern UI with subtle animations
+- Dark/light mode support
+- Contact form with email functionality
+- Project showcase
+- Blog
+- About page with skills and experience
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js (version 18 or higher)
+- pnpm (recommended) or npm/yarn
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   ```bash
+   git clone https://github.com/kanerep/personal-portfolio.git
+   cd personal-portfolio
+   ```
 
-## Learn More
+2. Install dependencies:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   pnpm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Create a `.env.local` file in the root directory and add the following variables:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```
+   EMAIL_USER=your_gmail_address@gmail.com
+   EMAIL_PASS=your_app_password
+   ```
 
-## Deploy on Vercel
+   **Note:** For Gmail, you need to use an "App Password" rather than your regular password. To generate an App Password:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   1. Go to your Google Account settings
+   2. Select "Security"
+   3. Under "Signing in to Google," select "2-Step Verification"
+   4. At the bottom of the page, select "App passwords"
+   5. Select "Mail" as the app and "Other (Custom name)" as the device
+   6. Name it "Portfolio Contact Form" or something similar
+   7. Copy the generated 16-character password
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. Run the development server:
+
+   ```bash
+   pnpm dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Customisation
+
+### Content
+
+Most of the content is stored in the page files:
+
+- Home: `src/app/page.tsx`
+- About: `src/app/about/page.tsx`
+- Projects: `src/app/projects/page.tsx`
+- Blog: `src/app/blog/page.tsx`
+- Contact: `src/app/contact/page.tsx`
+
+### Images
+
+Place your images in the `public/images` directory and update the image paths in the components.
+
+### Styling
+
+The project uses Tailwind CSS for styling. You can customise the colours and other design tokens in the `tailwind.config.js` file.
+
+## Deployment
+
+This project can be easily deployed on Vercel:
+
+1. Push your code to a GitHub repository
+2. Sign up for a Vercel account at [vercel.com](https://vercel.com)
+3. Connect your GitHub repository
+4. Configure the environment variables (EMAIL_USER and EMAIL_PASS)
+5. Deploy!
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
