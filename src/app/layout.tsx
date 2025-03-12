@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import { ThemeProvider } from '@/context/ThemeContext'
 import './globals.css'
 
 const geistSans = Geist({
@@ -14,9 +17,26 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'kanerep portfolio | coming soon',
-  description: 'kanerep portfolio - currently under construction',
+  title: 'kanerep | Front-End Engineer & Entrepreneur',
+  description: 'Personal portfolio of kanerep - Front-End Engineer and aspiring entrepreneur',
 }
+
+// Script to prevent theme flash
+const themeScript = `
+  (function() {
+    try {
+      const theme = localStorage.getItem('theme');
+      
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else if (theme === 'light' || !theme) {
+        document.documentElement.classList.add('light');
+      }
+    } catch (e) {
+      console.error('Theme detection failed:', e);
+    }
+  })();
+`
 
 export default function RootLayout({
   children,
@@ -24,10 +44,19 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {children}
-        <SpeedInsights />
+        <ThemeProvider>
+          <div className="min-h-screen grid grid-rows-[auto_1fr_auto]">
+            <Header />
+            <main className="pt-24 pb-12">{children}</main>
+            <Footer />
+          </div>
+          <SpeedInsights />
+        </ThemeProvider>
       </body>
     </html>
   )

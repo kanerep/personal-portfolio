@@ -1,6 +1,21 @@
 @import 'tailwindcss';
 
+/* Light theme (default) */
 :root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --orb-glow: rgba(0, 255, 128, 0.4);
+}
+
+/* Dark theme */
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --orb-glow: rgba(0, 255, 128, 0.5);
+}
+
+/* Light theme specific */
+.light {
   --background: #ffffff;
   --foreground: #171717;
   --orb-glow: rgba(0, 255, 128, 0.4);
@@ -13,8 +28,9 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* For system preference, still use the media query */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not(.light):not(.dark) {
     --background: #0a0a0a;
     --foreground: #ededed;
     --orb-glow: rgba(0, 255, 128, 0.5);
@@ -27,6 +43,12 @@ body {
   min-height: 100vh;
   display: grid;
   width: 100%;
+}
+
+/* change highlight to green */
+::selection {
+  background-color: oklch(0.696 0.17 162.48);
+  color: #fff;
 }
 
 @keyframes pulse {
