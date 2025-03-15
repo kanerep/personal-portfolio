@@ -5,9 +5,11 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import PageTransition from '@/components/PageTransition'
 import ProjectCard from '@/components/ProjectCard'
+import { getAllProjects } from '@/data/projects'
 
 export default function Projects() {
   const [filter, setFilter] = useState<string>('all')
+  const projects = getAllProjects()
 
   const filteredProjects =
     filter === 'all' ? projects : projects.filter((project) => project.tags.includes(filter))
@@ -62,7 +64,7 @@ export default function Projects() {
           >
             {filteredProjects.map((project) => (
               <motion.div
-                key={project.title}
+                key={project.id}
                 variants={{
                   hidden: { opacity: 0, y: 20 },
                   visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
@@ -71,7 +73,7 @@ export default function Projects() {
                 <ProjectCard
                   title={project.title}
                   description={project.description}
-                  imageUrl={project.imageUrl}
+                  imageUrl={project.imageUrl || ''}
                   tags={project.tags}
                   projectUrl={`/projects/${project.slug}`}
                   githubUrl={project.githubUrl}
@@ -113,55 +115,3 @@ export default function Projects() {
     </PageTransition>
   )
 }
-
-// Sample project data
-const projects = [
-  {
-    title: 'E-commerce Platform',
-    description: 'A modern e-commerce platform built with Next.js and Tailwind CSS.',
-    imageUrl: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4',
-    tags: ['web', 'react', 'nextjs'],
-    slug: 'ecommerce-platform',
-    githubUrl: 'https://github.com/kanerep/ecommerce-platform',
-  },
-  {
-    title: 'Portfolio Website',
-    description: 'A creative portfolio website for a digital artist.',
-    imageUrl: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4',
-    tags: ['web', 'design', 'react'],
-    slug: 'portfolio-website',
-    githubUrl: 'https://github.com/kanerep/portfolio-website',
-  },
-  {
-    title: 'Task Management App',
-    description: 'A productivity app for managing tasks and projects.',
-    imageUrl: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4',
-    tags: ['web', 'mobile', 'react'],
-    slug: 'task-management-app',
-    githubUrl: 'https://github.com/kanerep/task-management-app',
-  },
-  {
-    title: 'Weather Dashboard',
-    description: 'A weather dashboard that displays current and forecasted weather data.',
-    imageUrl: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4',
-    tags: ['web', 'react', 'api'],
-    slug: 'weather-dashboard',
-    githubUrl: 'https://github.com/kanerep/weather-dashboard',
-  },
-  {
-    title: 'Recipe Finder',
-    description: 'A recipe finder app that allows users to search for recipes by ingredients.',
-    imageUrl: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4',
-    tags: ['web', 'mobile', 'api'],
-    slug: 'recipe-finder',
-    githubUrl: 'https://github.com/kanerep/recipe-finder',
-  },
-  {
-    title: 'Blog Platform',
-    description: 'A blog platform built with Next.js and a headless CMS.',
-    imageUrl: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4',
-    tags: ['web', 'nextjs', 'cms'],
-    slug: 'blog-platform',
-    githubUrl: 'https://github.com/kanerep/blog-platform',
-  },
-]
