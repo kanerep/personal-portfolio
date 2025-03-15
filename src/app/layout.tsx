@@ -5,6 +5,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { ThemeProvider } from '@/context/ThemeContext'
 import './globals.css'
+import LoadingScreen from '@/components/LoadingScreen'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -19,6 +20,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'kanerep | Front-End Engineer & Entrepreneur',
   description: 'Personal portfolio of kanerep - Front-End Engineer and aspiring entrepreneur',
+  icons: {
+    icon: '/favicon.svg',
+  },
+  manifest: '/site.webmanifest',
 }
 
 // Script to prevent theme flash
@@ -51,9 +56,15 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider>
           <div className="min-h-screen grid grid-rows-[auto_1fr_auto]">
-            <Header />
-            <main className="pt-24 pb-12">{children}</main>
-            <Footer />
+            {process.env.NEXT_PUBLIC_LOADING_SCREEN === 'true' ? (
+              <LoadingScreen />
+            ) : (
+              <>
+                <Header />
+                <main className="pt-24 pb-12">{children}</main>
+                <Footer />
+              </>
+            )}
           </div>
           <SpeedInsights />
         </ThemeProvider>
