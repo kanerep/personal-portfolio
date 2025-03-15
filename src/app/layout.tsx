@@ -56,7 +56,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider>
           <div className="min-h-screen grid grid-rows-[auto_1fr_auto]">
-            {process.env.NEXT_PUBLIC_LOADING_SCREEN === 'true' ? (
+            {process.env.LOADING_SCREEN === 'true' ? (
               <LoadingScreen />
             ) : (
               <>
