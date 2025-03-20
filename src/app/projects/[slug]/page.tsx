@@ -2,7 +2,7 @@ import { getProjectBySlug } from '@/data/projects'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import PageTransition from '@/components/PageTransition'
-
+import Image from 'next/image'
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const project = getProjectBySlug(slug)
@@ -41,7 +41,13 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
           {project.image && (
             <div className="mb-10 overflow-hidden rounded-xl border border-foreground/10 shadow-sm">
-              <img src={project.image} alt={project.title} className="w-full h-auto" />
+              <Image
+                src={project.image}
+                alt={project.title}
+                className="w-full h-auto"
+                width={1000}
+                height={1000}
+              />
             </div>
           )}
 
