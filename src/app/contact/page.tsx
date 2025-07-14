@@ -62,7 +62,7 @@ export default function Contact() {
 
   return (
     <PageTransition>
-      <div className="max-w-6xl mx-auto px-6 md:px-10">
+      <div className="max-w-5xl mx-auto px-6 md:px-10">
         <section className="py-12 md:py-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -163,7 +163,7 @@ export default function Contact() {
                     href="https://github.com/kanerep"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 flex items-center justify-center rounded-lg bg-foreground text-background hover:bg-foreground/90 transition-colors"
+                    className="w-10 h-10 flex items-center justify-center rounded-lg bg-foreground/10 text-foreground hover:bg-foreground/15 transition-colors"
                     aria-label="GitHub"
                   >
                     <svg
@@ -184,7 +184,7 @@ export default function Contact() {
                     href="https://twitter.com/_kanerep"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 flex items-center justify-center rounded-lg bg-foreground text-background hover:bg-foreground/90 transition-colors"
+                    className="w-10 h-10 flex items-center justify-center rounded-lg bg-foreground/10 text-foreground hover:bg-foreground/15 transition-colors"
                     aria-label="Twitter/X"
                   >
                     <svg
