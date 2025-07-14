@@ -2,7 +2,7 @@ export default function About() {
   return (
     <section className="py-16">
       <div className="mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">About</h2>
+        <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">About</h2>
         <span className="w-10 h-1 bg-emerald-600 rounded-2xl block mb-4"></span>
         <div className="space-y-4 text-2xl text-foreground/80">
           <p>

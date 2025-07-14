@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Sora, Inter } from 'next/font/google'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -7,19 +7,20 @@ import { ThemeProvider } from '@/context/ThemeContext'
 import './globals.css'
 import LoadingScreen from '@/components/LoadingScreen'
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const sora = Sora({
+  variable: '--font-sora',
   subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
 })
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const inter = Inter({
+  variable: '--font-inter',
   subsets: ['latin'],
 })
 
 export const metadata: Metadata = {
   title: 'kanerep | Front-End Engineer & Entrepreneur',
-  description: 'Personal portfolio of kanerep - Front-End Engineer and aspiring entrepreneur',
+  description: 'Front-End Engineer ',
   icons: {
     icon: '/favicon.svg',
   },
@@ -53,7 +54,7 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${sora.variable} ${inter.variable} antialiased`}>
         <ThemeProvider>
           <div className="min-h-screen grid grid-rows-[auto_1fr_auto]">
             {process.env.LOADING_SCREEN === 'true' ? (

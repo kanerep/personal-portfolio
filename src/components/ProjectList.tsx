@@ -8,13 +8,14 @@ import Button from '@/components/Button'
 export default function ProjectList() {
   return (
     <section className="py-16 md:py-24" aria-labelledby="featured-projects">
-      <div className="text-center mb-16">
-        <h2 id="featured-projects" className="text-3xl md:text-4xl font-bold mb-4">
+      <div className="mb-16">
+        <h2 id="featured-projects" className="font-heading text-3xl md:text-4xl font-bold mb-4">
           Featured Projects
         </h2>
-        <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-          Check out some of my recent work
-        </p>
+        <span className="w-10 h-1 bg-emerald-600 rounded-2xl block mb-4"></span>
+        <div className="space-y-4 text-xl text-foreground/80">
+          <p>Check out some of my recent work</p>
+        </div>
       </div>
 
       <motion.div

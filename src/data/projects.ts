@@ -17,7 +17,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: '1',
-    slug: 'RF Heating & Plumbing',
+    slug: 'rf-heating-and-plumbing',
     title: 'RF Heating & Plumbing',
     description:
       'A professional company website to establish a strong online presence and showcase their services.',
@@ -33,12 +33,12 @@ export const projects: Project[] = [
   },
   {
     id: '2',
-    slug: 'chainedge',
+    slug: 'chain-edge',
     title: 'Chain Edge',
     description: 'A landing page rebuild for an onchain analytics platform.',
     longDescription:
       'A landing page rebuild for an onchain analytics platform. Features include a modern design, a clean interface, and a focus on data visualization.',
-    imageUrl: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=2070',
+    imageUrl: '/images/chainedge.png',
     technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
     tags: ['web', 'react', 'api'],
     githubUrl: '',
@@ -47,12 +47,12 @@ export const projects: Project[] = [
   },
   {
     id: '3',
-    slug: 'ai-quote-builder-app',
+    slug: 'ai-quote-builder',
     title: 'AI Quote Builder',
     description: 'A quote builder app that allows users to build quotes using AI powered features.',
     longDescription:
       'A quote builder app that allows users to build quotes using AI. Features include a modern design, a clean interface, and a focus on data visualization.',
-    imageUrl: 'https://images.unsplash.com/photo-1532978379173-523e16f371f5?q=80&w=2070',
+    imageUrl: '/images/ai-quote-builder.png',
     technologies: ['JavaScript', 'HTML', 'CSS', 'API Integration'],
     tags: ['web', 'api'],
     githubUrl: '',

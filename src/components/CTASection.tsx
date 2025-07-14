@@ -5,11 +5,16 @@ export default function CTASection() {
   return (
     <section className="py-16">
       <div className="mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">Let&apos;s Work Together</h2>
-        <p className="text-xl text-foreground/70 max-w-2xl">
-          Ready to bring your next project to life? I&apos;d love to hear about your ideas and
-          discuss how we can collaborate.
-        </p>
+        <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
+          Let&apos;s Work Together
+        </h2>
+        <span className="w-10 h-1 bg-emerald-600 rounded-2xl block mb-4"></span>
+        <div className="space-y-4 text-xl text-foreground/80">
+          <p>
+            Ready to bring your next project to life? I&apos;d love to hear about your ideas and
+            discuss how we can collaborate.
+          </p>
+        </div>
       </div>
 
       <div className="max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-6">

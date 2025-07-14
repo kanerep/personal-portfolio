@@ -119,11 +119,14 @@ export default function Services() {
   return (
     <section className="py-12">
       <div className="mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">What I Do</h2>
-        <p className="text-xl text-foreground/70 max-w-2xl">
-          I specialise in creating modern, responsive web applications with a focus on user
-          experience.
-        </p>
+        <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">What I Do</h2>
+        <span className="w-10 h-1 bg-emerald-600 rounded-2xl block mb-4"></span>
+        <div className="space-y-4 text-xl text-foreground/80">
+          <p>
+            I specialise in creating modern, responsive web applications with a focus on user
+            experience.
+          </p>
+        </div>
       </div>
 
       {/* Sleek Services List */}

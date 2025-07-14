@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import PageTransition from '@/components/PageTransition'
 import ProjectCard from '@/components/ProjectCard'
 import { getAllProjects } from '@/data/projects'
+import Button from '@/components/Button'
 
 export default function Projects() {
   const [filter, setFilter] = useState<string>('all')
@@ -83,15 +84,12 @@ export default function Projects() {
 
           {filteredProjects.length === 0 && (
             <div className="text-center py-16">
-              <p className="text-xl text-foreground/70">
+              <p className="text-xl text-foreground/70 mb-4">
                 No projects found with the selected filter.
               </p>
-              <button
-                onClick={() => setFilter('all')}
-                className="mt-4 py-2 px-4 bg-emerald-500 text-white rounded-md hover:bg-emerald-600 transition-colors"
-              >
+              <Button variant="primary" size="sm" type="button" onClick={() => setFilter('all')}>
                 View All Projects
-              </button>
+              </Button>
             </div>
           )}
         </section>
