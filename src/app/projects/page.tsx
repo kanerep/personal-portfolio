@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
 import { motion } from 'framer-motion'
 import PageTransition from '@/components/PageTransition'
 import ProjectCard from '@/components/ProjectCard'
@@ -16,7 +15,7 @@ export default function Projects() {
 
   return (
     <PageTransition>
-      <div className="max-w-6xl mx-auto px-6 md:px-10">
+      <div className="max-w-5xl mx-auto px-6 md:px-10">
         <section className="py-12 md:py-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -76,7 +75,7 @@ export default function Projects() {
                   imageUrl={project.imageUrl || ''}
                   tags={project.tags}
                   projectUrl={`/projects/${project.slug}`}
-                  githubUrl={project.githubUrl}
+                  githubUrl={project.githubUrl || ''}
                 />
               </motion.div>
             ))}
@@ -95,21 +94,6 @@ export default function Projects() {
               </button>
             </div>
           )}
-        </section>
-
-        <section className="py-16 border-t border-foreground/10">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Want to Work Together?</h2>
-            <p className="text-xl text-foreground/70 max-w-2xl mx-auto mb-8">
-              I&apos;m always open to discussing new projects and opportunities.
-            </p>
-            <Link
-              href="/contact"
-              className="py-3 px-6 bg-emerald-500 text-white rounded-md hover:bg-emerald-600 transition-colors"
-            >
-              Get in Touch
-            </Link>
-          </div>
         </section>
       </div>
     </PageTransition>
