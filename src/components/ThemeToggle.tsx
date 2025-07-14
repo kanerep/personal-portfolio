@@ -23,7 +23,7 @@ export default function ThemeToggle() {
   return (
     <motion.button
       onClick={toggleTheme}
-      className="p-2 rounded-md bg-foreground/10 text-foreground transition-colors hover:bg-foreground/15"
+      className="p-2 rounded-xl cursor-pointer bg-foreground/10 text-foreground transition-colors hover:bg-foreground/15"
       aria-label={`${theme === 'light' ? 'Light' : 'Dark'} Mode (Click to switch to ${
         theme === 'light' ? 'Dark' : 'Light'
       } Mode)`}

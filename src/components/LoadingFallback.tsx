@@ -1,7 +1,36 @@
-export default function LoadingFallback() {
+'use client'
+
+import { motion } from 'framer-motion'
+
+interface LoadingFallbackProps {
+  message?: string
+  className?: string
+  showSpinner?: boolean
+  'aria-label'?: string
+}
+
+export default function LoadingFallback({
+  message = 'Loading...',
+  className = '',
+  showSpinner = true,
+  'aria-label': ariaLabel = 'Loading content',
+}: LoadingFallbackProps) {
   return (
-    <div className="relative w-60 h-60 flex items-center justify-center">
-      <div className="w-20 h-20 rounded-full border-4 border-foreground/30 border-t-foreground/80 animate-spin"></div>
+    <div
+      className={`flex flex-col items-center justify-center p-8 ${className}`}
+      role="status"
+      aria-label={ariaLabel}
+      aria-live="polite"
+    >
+      {showSpinner && (
+        <motion.div
+          className="w-8 h-8 border-2 border-emerald-500 border-t-transparent rounded-full"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+          aria-hidden="true"
+        />
+      )}
+      <p className={`text-foreground/70 ${showSpinner ? 'mt-4' : ''}`}>{message}</p>
     </div>
   )
 }
