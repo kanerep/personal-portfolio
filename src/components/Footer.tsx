@@ -1,11 +1,12 @@
 'use client'
 
 import Link from 'next/link'
+import Button from '@/components/Button'
 
 export default function Footer() {
   return (
-    <footer className="w-full py-8 bg-background border-t border-foreground/10">
-      <div className="max-w-6xl mx-auto px-6 md:px-10">
+    <footer className="w-full py-8 bg-background">
+      <div className="max-w-5xl mx-auto p-6 md:p-10  mb-2 rounded-3xl border border-foreground/10 shadow-sm">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-8">
           <div>
             <h3 className="text-xl font-bold mb-4">
@@ -95,12 +96,9 @@ export default function Footer() {
               Let&apos;s connect! Send a message through the contact form or find me on social
               media.
             </p>
-            <Link
-              href="/contact"
-              className="inline-block mt-2 py-2 px-4 bg-emerald-500 text-white rounded-md hover:bg-emerald-600 transition-colors"
-            >
+            <Button variant="primary" size="sm" type="button" href="/contact">
               Get in Touch
-            </Link>
+            </Button>
           </div>
         </div>
 
