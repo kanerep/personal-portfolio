@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import PageTransition from '@/components/PageTransition'
+import Button from '@/components/Button'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -85,28 +86,6 @@ export default function Contact() {
               <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
 
               <div className="space-y-6">
-                {/* <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-500 mt-1">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold">Phone</h3>
-                    <p className="text-foreground/70">+44 000 000 0000</p>
-                  </div>
-                </div> */}
-
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-500 mt-1">
                     <svg
@@ -228,12 +207,9 @@ export default function Contact() {
                   <p className="text-foreground/70 mb-6">
                     Thank you for reaching out. I&apos;ll get back to you as soon as possible.
                   </p>
-                  <button
-                    onClick={() => setIsSubmitted(false)}
-                    className="py-2 px-4 bg-emerald-500 text-white rounded-md hover:bg-emerald-600 transition-colors"
-                  >
+                  <Button variant="primary" onClick={() => setIsSubmitted(false)} type="button">
                     Send Another Message
-                  </button>
+                  </Button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -312,17 +288,18 @@ export default function Contact() {
                     ></textarea>
                   </div>
 
-                  <button
+                  <Button
+                    variant="primary"
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full py-3 px-6 rounded-lg text-white transition-colors ${
+                    className={`w-full justify-center ${
                       isSubmitting
                         ? 'bg-emerald-400 cursor-not-allowed'
                         : 'bg-emerald-500 hover:bg-emerald-600'
                     }`}
                   >
                     {isSubmitting ? 'Sending...' : 'Send Message'}
-                  </button>
+                  </Button>
                 </form>
               )}
             </motion.div>
