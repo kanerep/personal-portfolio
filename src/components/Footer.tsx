@@ -13,7 +13,7 @@ export default function Footer() {
               kanerep<span className="text-emerald-500">.</span>
             </h3>
             <p className="text-foreground/70 mb-4 max-w-xs">
-              Front-end engineer and aspiring entrepreneur building creative digital experiences.
+              Building AI-Powered MVPs & High-Performance Web Apps with React & Next.js.
             </p>
             <div className="flex gap-4">
               <a
@@ -64,22 +64,10 @@ export default function Footer() {
                 Home
               </Link>
               <Link
-                href="/about"
-                className="text-foreground/70 hover:text-foreground transition-colors"
-              >
-                About
-              </Link>
-              <Link
                 href="/projects"
                 className="text-foreground/70 hover:text-foreground transition-colors"
               >
                 Projects
-              </Link>
-              <Link
-                href="/blog"
-                className="text-foreground/70 hover:text-foreground transition-colors"
-              >
-                Blog
               </Link>
               <Link
                 href="/contact"

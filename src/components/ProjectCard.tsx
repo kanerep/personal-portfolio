@@ -3,8 +3,7 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import Button from './Button'
-import { ArrowRightIcon } from 'lucide-react'
+import Link from 'next/link'
 
 interface ProjectCardProps {
   title: string
@@ -114,17 +113,28 @@ export default function ProjectCard({
           ))}
         </div>
 
-        <Button
+        <Link
           href={projectUrl}
-          variant="text"
-          type="button"
-          className="justify-start px-0 group"
-          size="sm"
+          className="inline-flex items-center py-1 font-medium text-emerald-500 hover:text-emerald-600 transition-colors duration-300"
           aria-label={`View detailed information about ${title} project`}
         >
           View Project
-          <ArrowRightIcon className="w-3 h-3 rotate-[-45deg] group-hover:rotate-0 transition-transform duration-300" />
-        </Button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="ml-2"
+          >
+            <path d="M7 17L17 7"></path>
+            <path d="M7 7h10v10"></path>
+          </svg>
+        </Link>
       </div>
     </motion.article>
   )

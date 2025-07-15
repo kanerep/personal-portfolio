@@ -124,7 +124,7 @@ export default function Services() {
         <div className="space-y-4 text-xl text-foreground/80">
           <p>
             I specialise in creating modern, responsive web applications with a focus on user
-            experience.
+            experience and performance.
           </p>
         </div>
       </div>
