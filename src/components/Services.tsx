@@ -147,7 +147,7 @@ export default function Services() {
                 <h3 className="text-xl font-semibold mb-2 group-hover:text-emerald-500 transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-foreground/70 leading-relaxed">{service.description}</p>
+                <p className="text-foreground/80 leading-relaxed">{service.description}</p>
               </div>
             </div>
           </motion.div>

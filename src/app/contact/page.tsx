@@ -72,7 +72,7 @@ export default function Contact() {
             className="text-center mb-16"
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Get in Touch</h1>
-            <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
+            <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
               Have a project in mind or just want to say hello? I&apos;d love to hear from you.
             </p>
           </motion.div>
@@ -106,7 +106,7 @@ export default function Contact() {
                   <div>
                     <h3 className="text-lg font-semibold">Email</h3>
                     <a href="mailto:hey@kanerep.com">
-                      <p className="text-foreground/70">hey@kanerep.com</p>
+                      <p className="text-foreground/80">hey@kanerep.com</p>
                     </a>
                   </div>
                 </div>
@@ -130,7 +130,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold">Location</h3>
-                    <p className="text-foreground/70">Midlands, United Kingdom</p>
+                    <p className="text-foreground/80">Midlands, United Kingdom</p>
                   </div>
                 </div>
               </div>
@@ -204,7 +204,7 @@ export default function Contact() {
                     </svg>
                   </div>
                   <h2 className="text-2xl font-bold mb-4">Message Sent!</h2>
-                  <p className="text-foreground/70 mb-6">
+                  <p className="text-foreground/80 mb-6">
                     Thank you for reaching out. I&apos;ll get back to you as soon as possible.
                   </p>
                   <Button variant="primary" onClick={() => setIsSubmitted(false)} type="button">

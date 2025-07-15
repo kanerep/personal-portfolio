@@ -12,7 +12,7 @@ export default function Footer() {
             <h3 className="text-xl font-bold mb-4">
               kanerep<span className="text-emerald-500">.</span>
             </h3>
-            <p className="text-foreground/70 mb-4 max-w-xs">
+            <p className="text-foreground/80 mb-4 max-w-xs">
               Building AI-Powered MVPs & High-Performance Web Apps with React & Next.js.
             </p>
             <div className="flex gap-4">
@@ -20,7 +20,7 @@ export default function Footer() {
                 href="https://github.com/kanerep"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-foreground/70 hover:text-foreground transition-colors"
+                className="text-foreground/80 hover:text-foreground transition-colors"
                 aria-label="GitHub"
               >
                 <svg
@@ -41,7 +41,7 @@ export default function Footer() {
                 href="https://twitter.com/_kanerep"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-foreground/70 hover:text-foreground transition-colors"
+                className="text-foreground/80 hover:text-foreground transition-colors"
                 aria-label="Twitter/X"
               >
                 <svg
@@ -60,18 +60,18 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <nav className="flex flex-col gap-2">
-              <Link href="/" className="text-foreground/70 hover:text-foreground transition-colors">
+              <Link href="/" className="text-foreground/80 hover:text-foreground transition-colors">
                 Home
               </Link>
               <Link
                 href="/projects"
-                className="text-foreground/70 hover:text-foreground transition-colors"
+                className="text-foreground/80 hover:text-foreground transition-colors"
               >
                 Projects
               </Link>
               <Link
                 href="/contact"
-                className="text-foreground/70 hover:text-foreground transition-colors"
+                className="text-foreground/80 hover:text-foreground transition-colors"
               >
                 Contact
               </Link>
@@ -80,7 +80,7 @@ export default function Footer() {
 
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <p className="text-foreground/70 mb-2">
+            <p className="text-foreground/80 mb-2">
               Let&apos;s connect! Send a message through the contact form or find me on social
               media.
             </p>

@@ -151,7 +151,7 @@ function MobileMenu({
                   className={`group py-3 px-4 rounded-md transition-colors flex items-center ${
                     currentPath === item.path
                       ? 'bg-emerald-500/10 text-foreground'
-                      : 'text-foreground/70 hover:bg-foreground/5 hover:text-foreground'
+                      : 'text-foreground/80 hover:bg-foreground/5 hover:text-foreground'
                   }`}
                 >
                   <span
@@ -174,7 +174,7 @@ function MobileMenu({
                     href="https://github.com/yourusername"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-foreground/70 hover:text-foreground transition-colors"
+                    className="text-foreground/80 hover:text-foreground transition-colors"
                     aria-label="GitHub"
                   >
                     <svg
@@ -194,7 +194,7 @@ function MobileMenu({
                     href="https://twitter.com/yourusername"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-foreground/70 hover:text-foreground transition-colors"
+                    className="text-foreground/80 hover:text-foreground transition-colors"
                     aria-label="Twitter"
                   >
                     <svg
@@ -214,7 +214,7 @@ function MobileMenu({
                     href="https://linkedin.com/in/yourusername"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-foreground/70 hover:text-foreground transition-colors"
+                    className="text-foreground/80 hover:text-foreground transition-colors"
                     aria-label="LinkedIn"
                   >
                     <svg

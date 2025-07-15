@@ -25,7 +25,7 @@ export default function Projects() {
             className="text-center mb-16"
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">My Projects</h1>
-            <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
+            <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
               A collection of my work, side projects, and experiments
             </p>
           </motion.div>
@@ -39,7 +39,7 @@ export default function Projects() {
                   className={`px-4 py-2 rounded-full transition-colors ${
                     filter === tag
                       ? 'bg-emerald-500 text-white'
-                      : 'bg-foreground/5 text-foreground/70 hover:bg-foreground/10'
+                      : 'bg-foreground/5 text-foreground/80 hover:bg-foreground/10'
                   }`}
                 >
                   {tag.charAt(0).toUpperCase() + tag.slice(1)}
@@ -84,7 +84,7 @@ export default function Projects() {
 
           {filteredProjects.length === 0 && (
             <div className="text-center py-16">
-              <p className="text-xl text-foreground/70 mb-4">
+              <p className="text-xl text-foreground/80 mb-4">
                 No projects found with the selected filter.
               </p>
               <Button variant="primary" size="sm" type="button" onClick={() => setFilter('all')}>

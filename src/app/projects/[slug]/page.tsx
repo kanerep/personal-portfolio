@@ -40,7 +40,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               <div className="mb-8">
                 <Link
                   href="/projects"
-                  className="group inline-flex items-center gap-2 text-foreground/70 hover:text-emerald-500 transition-all duration-300"
+                  className="group inline-flex items-center gap-2 text-foreground/80 hover:text-emerald-500 transition-all duration-300"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -64,10 +64,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 {/* Left: Title and Meta */}
                 <div className="lg:col-span-3 space-y-6">
                   <div>
-                    <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+                    <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
                       {project.title}
                     </h1>
-                    <p className="text-lg md:text-xl text-foreground/70 leading-relaxed max-w-2xl">
+                    <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-2xl">
                       {project.description}
                     </p>
                   </div>
@@ -204,7 +204,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
               Interested in working together?
             </h2>
-            <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-foreground/80 mb-8 max-w-2xl mx-auto">
               I&apos;m always open to discussing new opportunities and interesting projects.
             </p>
             <Button variant="primary" type="button" href="/contact">

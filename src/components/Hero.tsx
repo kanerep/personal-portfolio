@@ -11,7 +11,7 @@ export default function Hero() {
             <span className="text-emerald-500">React</span> &{' '}
             <span className="text-emerald-500">Next.js</span>
           </h1>
-          <p className="text-xl text-foreground/70 mb-8 max-w-lg">
+          <p className="text-xl text-foreground/80 mb-8 max-w-lg">
             From pixel-perfect UIs to scalable server-side logic, delivering smooth, maintainable
             MVP solutions
           </p>

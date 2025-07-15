@@ -45,7 +45,7 @@ export default function CTASection() {
               <h3 className="text-xl font-semibold mb-2 group-hover:text-emerald-500 transition-colors">
                 Start a Conversation
               </h3>
-              <p className="text-foreground/70 leading-relaxed mb-4">
+              <p className="text-foreground/80 leading-relaxed mb-4">
                 Have a project in mind? Let&apos;s discuss your requirements and how I can help
                 bring your vision to life.
               </p>
@@ -100,7 +100,7 @@ export default function CTASection() {
               <h3 className="text-xl font-semibold mb-2 group-hover:text-emerald-500 transition-colors">
                 Schedule a Call
               </h3>
-              <p className="text-foreground/70 leading-relaxed mb-4">
+              <p className="text-foreground/80 leading-relaxed mb-4">
                 Prefer to chat directly? Book a consultation call to discuss your project
                 requirements and timeline.
               </p>

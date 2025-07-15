@@ -107,7 +107,7 @@ export default function MarkdownRenderer({ content, className }: MarkdownRendere
                     preload="metadata"
                   >
                     <source src={href} type="video/mp4" />
-                    <p className="text-foreground/70 text-center py-4">
+                    <p className="text-foreground/80 text-center py-4">
                       Your browser doesn&apos;t support video playback.
                       <a
                         href={href}

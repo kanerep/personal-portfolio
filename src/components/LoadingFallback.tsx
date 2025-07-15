@@ -30,7 +30,7 @@ export default function LoadingFallback({
           aria-hidden="true"
         />
       )}
-      <p className={`text-foreground/70 ${showSpinner ? 'mt-4' : ''}`}>{message}</p>
+      <p className={`text-foreground/80 ${showSpinner ? 'mt-4' : ''}`}>{message}</p>
     </div>
   )
 }

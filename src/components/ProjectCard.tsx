@@ -71,7 +71,7 @@ export default function ProjectCard({
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground/70 hover:text-foreground transition-colors ml-2 flex-shrink-0 p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="text-foreground/80 hover:text-foreground transition-colors ml-2 flex-shrink-0 p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
               aria-label={`View ${title} source code on GitHub`}
             >
               <svg
@@ -94,7 +94,7 @@ export default function ProjectCard({
         </div>
 
         <p
-          className="text-foreground/70 mb-4 flex-grow line-clamp-3"
+          className="text-foreground/80 mb-4 flex-grow line-clamp-3"
           aria-describedby={`project-title-${title.replace(/\s+/g, '-').toLowerCase()}`}
         >
           {description}
@@ -105,7 +105,7 @@ export default function ProjectCard({
             <span
               key={tag}
               role="listitem"
-              className="px-2 py-1 text-xs rounded-full bg-foreground/5 text-foreground/70 border border-foreground/10"
+              className="px-2 py-1 text-xs rounded-full bg-foreground/5 text-foreground/80 border border-foreground/10"
               aria-label={`Technology: ${tag}`}
             >
               {tag}
