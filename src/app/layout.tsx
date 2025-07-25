@@ -19,8 +19,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'kanerep | Front-End Engineer & Entrepreneur',
-  description: 'Front-End Engineer ',
+  title: 'kanerep | Front-End Engineer',
+  description: 'Front-End Engineer building high-performance web apps with React & Next.js',
   icons: {
     icon: '/favicon.svg',
   },

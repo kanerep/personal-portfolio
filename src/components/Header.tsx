@@ -171,7 +171,7 @@ function MobileMenu({
               <div className="flex items-center gap-4 justify-between">
                 <div className="flex items-center gap-5">
                   <a
-                    href="https://github.com/yourusername"
+                    href="https://github.com/kanerep"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-foreground/80 hover:text-foreground transition-colors"
@@ -191,7 +191,7 @@ function MobileMenu({
                     </svg>
                   </a>
                   <a
-                    href="https://twitter.com/yourusername"
+                    href="https://twitter.com/_kanerep"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-foreground/80 hover:text-foreground transition-colors"
@@ -211,23 +211,25 @@ function MobileMenu({
                     </svg>
                   </a>
                   <a
-                    href="https://linkedin.com/in/yourusername"
+                    href="https://linkedin.com/in/kane-elliott-peace/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-foreground/80 hover:text-foreground transition-colors"
                     aria-label="LinkedIn"
                   >
                     <svg
+                      xmlns="http://www.w3.org/2000/svg"
                       width="24"
                       height="24"
                       viewBox="0 0 24 24"
                       fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     >
-                      <path
-                        d="M19.7 3H4.3C3.582 3 3 3.582 3 4.3V19.7C3 20.418 3.582 21 4.3 21H19.7C20.418 21 21 20.418 21 19.7V4.3C21 3.582 20.418 3 19.7 3ZM8.339 18.338H5.667V9.747H8.339V18.338ZM7.003 8.574C6.147 8.574 5.455 7.88 5.455 7.026C5.455 6.171 6.147 5.478 7.003 5.478C7.858 5.478 8.55 6.171 8.55 7.026C8.55 7.88 7.858 8.574 7.003 8.574ZM18.338 18.338H15.669V14.169C15.669 13.147 15.65 11.838 14.252 11.838C12.835 11.838 12.621 12.947 12.621 14.095V18.338H9.954V9.747H12.514V10.922H12.552C12.916 10.248 13.779 9.535 15.067 9.535C17.77 9.535 18.338 11.313 18.338 13.627V18.338Z"
-                        fill="currentColor"
-                      />
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                      <rect width="4" height="12" x="2" y="9"></rect>
                     </svg>
                   </a>
                 </div>
